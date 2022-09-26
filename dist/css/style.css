@@ -998,6 +998,10 @@ html,
 .mid_section.has_bg .mid_contents {
   flex: 0;
 }
+.mid_section.sub_mid {
+  background-color: #fff;
+  padding-bottom: 3.75rem;
+}
 
 .mid_bg:after {
   display: block;
@@ -2731,11 +2735,215 @@ input.form_input:focus {
   color: #bebebe;
 }
 
+.sort_vitem_zone {
+  padding: 1.125rem;
+}
+
+.sort_vlabel_row {
+  margin-bottom: 0.625rem;
+}
+
+.sort_vlabel {
+  display: block;
+  font-size: 1rem;
+  color: #2b2b2b;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.sort_field_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.sort_field_long {
+  flex: 1;
+  min-width: 0;
+}
+
+.sort_field_short {
+  flex: 0;
+  margin-left: 0.5rem;
+}
+
+.sort_input_list {
+  display: flex;
+  align-items: center;
+}
+
+.sort_input_list > li {
+  flex: 1;
+  min-width: 0;
+}
+
+.sort_input_list > li.sort_else {
+  flex: 0;
+  min-width: auto;
+}
+
+.sort_elsetext {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: #333333;
+  padding: 0 0.5rem;
+}
+
+.btn_sortsearch {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #404bd9 url("../images/icon_search.png") no-repeat 50% 50%/100% auto;
+  border-radius: 100%;
+}
+
+.list_thead_wrap {
+  background: #f4f5fc;
+  border-top: 1px solid #404bd9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 0 1.125rem;
+}
+
+.list_tbody,
+.list_thead {
+  width: 100%;
+  table-layout: fixed;
+  box-sizing: border-box;
+}
+
+.list_thead th {
+  padding: 0.9375rem 0.3125rem 0.875rem;
+}
+
+.thtext {
+  display: inline-block;
+  font-size: 0.9375rem;
+  color: #1b1b1b;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.list_tbody_wrap {
+  padding: 0 1.125rem;
+}
+
+.list_tbody td {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 0.8125rem 0.3125rem 0.75rem;
+}
+
+.list_tbody td.nodata_td {
+  padding: 6.25rem 0.3125rem 6.125rem;
+}
+
+.nodata_para,
+.tdtext {
+  display: inline-block;
+  font-size: 0.9375rem;
+  color: #2b2b2b;
+}
+
+.count_bottom_item_wrap {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count_bottom_item {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #c8c8c8;
+  border-radius: 6.25rem;
+  justify-content: center;
+  padding: 0.875rem 1.875rem 1rem;
+  min-width: 7.5rem;
+}
+
+.count_bottom_label {
+  display: inline-block;
+  font-size: 1rem;
+  color: #333;
+  padding: 0.21875rem;
+  line-height: 1;
+}
+
+.count_bottom_value {
+  display: inline-block;
+  font-size: 1.25rem;
+  color: #000;
+  font-weight: 500;
+  padding: 0.21875rem;
+  line-height: 1;
+}
+
+.input_form_select_w {
+  height: 2.8125rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  background: #fff url("../images/icon_calendar.png") no-repeat 100% 50%/2.6875rem auto;
+}
+.input_form_select_w.active .input_form_slabel,
+.input_form_select_w.active .input_form_slabel {
+  display: none;
+}
+.input_form_select_w.active input.input_form_select,
+.input_form_select_w.active input.input_form_select {
+  opacity: 1;
+}
+
+input.input_form_select {
+  position: relative;
+  background: none;
+  opacity: 0;
+  color: #2b2b2b;
+  font-weight: 700;
+  font-family: "Noto Sans KR";
+  font-size: 0.875rem;
+  z-index: 5;
+  height: 2.8125rem;
+  padding: 0 2.5rem 0 0.625rem;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+input.input_form_select::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.input_form_slabel {
+  color: #bebebe;
+  font-weight: normal;
+  font-size: 0.875rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 2.5rem 0 0.625rem;
+  line-height: 1;
+}
+
 .visual_wrap {
   background: linear-gradient(0deg, rgb(64, 75, 217) 0%, rgb(64, 75, 217) 50%, rgb(55, 65, 202) 100%);
 }
 .visual_wrap.type2 {
   background: url("../images/bg_field_sv.jpg") no-repeat 0 0/cover;
+}
+.visual_wrap.type2 .ico_sv:after {
+  background-color: #2630af;
 }
 .visual_wrap.type3 {
   background: transparent;
@@ -2924,6 +3132,18 @@ input.form_input:focus {
   background-position: 0 100%;
 }
 
+@media (max-width: 374px) {
+  .input_form_slabel,
+input.input_form_select {
+    font-size: 0.8125rem;
+  }
+  .sort_elsetext {
+    padding: 0 0.3125rem;
+  }
+  .sort_field_short {
+    margin-left: 0.3125rem;
+  }
+}
 @media (max-width: 359px) {
   input.form_input::-webkit-input-placeholder {
     color: transparent !important;

@@ -117,8 +117,9 @@ function commonForm() {
       thisTarget.classList.remove("ready");
     }
   });
-
   let form_input = document.querySelectorAll(".form_input");
+  let input_form_select = document.querySelectorAll(".input_form_select");
+  let domHTML = document.querySelector("html");
   if(form_input.length){
     form_input.forEach(function(elem,index){
           elem.addEventListener("focus",function(e){
@@ -151,5 +152,34 @@ function commonForm() {
         currentParent.classList.remove("active");
       }
   }
+
+  if(input_form_select.length){
+      input_form_select.forEach(function(elem,index){
+          let this_p = elem.closest(".input_form_select_w");
+          if(elem.value.length>0){
+              this_p.classList.add("active");
+              return;
+          }
+          this_p.classList.remove("active");
+
+          elem.addEventListener("change",function(e){
+              e.preventDefault();
+              let this_p = elem.closest(".input_form_select_w");
+              this_p.classList.add("active");
+          },false);
+          elem.addEventListener("focus",function(e){
+              e.preventDefault();
+              let this_p = elem.closest(".input_form_select_w");
+              if(domHTML.classList.contains("window")){
+                  this_p.classList.add("active");
+              }
+          },false);
+          elem.addEventListener("focusout",function(e){
+              let this_p = elem.closest(".input_form_select_w");
+              if(elem.value.length>0){return;}
+              this_p.classList.remove("active");
+          },false);
+      })
+    }
 }
 
